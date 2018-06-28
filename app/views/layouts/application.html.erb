@@ -3,12 +3,12 @@
   <head>
     <title>Saasapp</title>
     <%= csrf_meta_tags %>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet"> <!--Removed http/https from the link, not needed and it makes it more flexible -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= yield %> <!-- This is where rails pulls in the code from the other views files, e.g. the home.html file-->
   </body>
 </html>
