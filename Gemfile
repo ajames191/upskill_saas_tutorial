@@ -28,6 +28,14 @@ gem 'jbuilder', '2.5.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#use Twitter Bootstrap library for front-end UI and layout.
+#after including it here, use the "bundle install" linux terminal command
+#once installed, open the /workspace/saasapp/app/assets/stylesheets directory and change the "application.css" to "application.css.scss". This allos an additional CSS language called "saas css"
+#then open the application.css.scss file and add the following lines of code before any other CSS code:
+#    @import 'bootstrap-sprockets';
+#    @import 'bootstrap'
+gem 'bootstrap-sass', '3.3.7'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
