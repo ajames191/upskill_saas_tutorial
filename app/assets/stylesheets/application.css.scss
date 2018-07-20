@@ -17,10 +17,12 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+//typography styles
 h1, h2, h3 {
     font-family: 'Open Sans', sans-serif;
 }
 
+//background gradient
 .navbar, .home-callout {
     //Gradient provided by @_ighosh at uiGradients.com
     background: #667db6;  /* fallback for old browsers */
@@ -28,35 +30,22 @@ h1, h2, h3 {
     background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+//nav styles
 .navbar {
     border: none;
 }
 
-.navbar-default .navbar-brand {
-    //"DevMatch" navbar item
-    color: white;
-}
-
+.navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
-    //"About" navbar item
+    //"DevMatch" and "About" navbar items
     color: white;
+    &:hover { //saas (scss) way to nest selectors
+        color: white;
+        opacity: 0.75;
+    }
 }
 
-//colour and opacity for hovering over "DevMatch" link
-.navbar-default .navbar-brand:hover {
-    //"DevMatch" navbar item
-    color: white;
-    opacity: 0.75;
-}
-
-//colour and opacity for hovering over "About" link
-.navbar-default .navbar-nav > li > a:hover {
-    //"About" navbar item
-    color: white;
-    opacity: 0.75;
-}
-
-
+//home page styles
 .home-callout {
     color: white;
     margin-top: -20px;
