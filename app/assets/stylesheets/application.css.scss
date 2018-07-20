@@ -32,6 +32,31 @@ h1, h2, h3 {
     border: none;
 }
 
+.navbar-default .navbar-brand {
+    //"DevMatch" navbar item
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+    //"About" navbar item
+    color: white;
+}
+
+//colour and opacity for hovering over "DevMatch" link
+.navbar-default .navbar-brand:hover {
+    //"DevMatch" navbar item
+    color: white;
+    opacity: 0.75;
+}
+
+//colour and opacity for hovering over "About" link
+.navbar-default .navbar-nav > li > a:hover {
+    //"About" navbar item
+    color: white;
+    opacity: 0.75;
+}
+
+
 .home-callout {
     color: white;
     margin-top: -20px;
