@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
     end
     
     def create #method to save user input on the contact form
-        @contact = Contact.new(contact_params)
+        @contact = Contact.new(contact_params) #contact_params is from the private field below
         if @contact.save
             redirect_to new_contact_path, notice: "Message sent."
         else
