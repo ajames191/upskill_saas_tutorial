@@ -32,7 +32,12 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
-
+    
+    <div class="container">
+      <% flash.each do |type, msg| %> <!--Check "contacts_controller.rb file to see what :notice is -->
+        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+      <% end %>
+    </div>
     <%= yield %> <!-- This is where rails pulls in the code from the other views files, e.g. the home.html file-->
     
   </body>
