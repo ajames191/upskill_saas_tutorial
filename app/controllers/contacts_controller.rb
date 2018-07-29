@@ -7,6 +7,10 @@ class ContactsController < ApplicationController
     def create #method to save user input on the contact form
         @contact = Contact.new(contact_params) #contact_params is from the private field below
         if @contact.save
+            name = params[:contact][:name]
+            email = params[:contact][:email]
+            body = params[:contact][:comments] #body is referred to as comments here as we have defined it that way below on line 24
+            ContactMailer.contact_email(name, email, body).deliver
             flash[:success] = "Message sent."
             redirect_to new_contact_path
         else
