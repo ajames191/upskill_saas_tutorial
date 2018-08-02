@@ -1,9 +1,13 @@
 class ContactsController < ApplicationController
+    
+    #GET request to /contacts-us
+    #Show new contact form
     def new #views file has to correspond with this name
         @contact = Contact.new #everytime somebody pulls up the contacts form, rails will generate a new contact object
         #the @contact is an "instance variable"
     end
     
+    #POST request to /contacts
     def create #method to save user input on the contact form
         @contact = Contact.new(contact_params) #contact_params is from the private field below
         if @contact.save
