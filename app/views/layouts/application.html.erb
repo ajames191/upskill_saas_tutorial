@@ -41,7 +41,7 @@
       </div>
     </nav>
     
-    <div class="container">
+    <div class="container flash-container">
       <!--for each flash message, pass in type and msg temp variables -->
       <% flash.each do |type, msg| %> <!-- for each in the flash list (success, danger as seen in the contacts_controller file). The flash list has key value pairs -->
         <%= content_tag :div, msg, class: "alert alert-#{type}" %> <!--create a div tag, pass in the message and assign it the appropriate class type, e.g. success or danger -->
